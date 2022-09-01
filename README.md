@@ -1,0 +1,1 @@
+根据漏洞作者浅蓝师傅（[@iSafeBlue](https://github.com/iSafeBlue)）议题中的思路复现，TQL
