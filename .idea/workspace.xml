@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53afde28-4bf0-4939-83b4-d0dcbdb132cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CodeverseWorkspaceAppSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/geojson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/geojson.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.fd.executor": "Run",
     "Application.geojson.executor": "Run",
+    "Application.jsonpatch.executor": "Run",
+    "Maven.FastjsonVulns [clean].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -61,10 +64,20 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.12378378",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Application.geojson">
+    <configuration name="fd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fd" />
+      <module name="FastjsonVulns" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="geojson" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="geojson" />
       <module name="FastjsonVulns" />
@@ -74,6 +87,13 @@
     </configuration>
     <configuration name="groovy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="groovy" />
+      <module name="FastjsonVulns" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="jsonpatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jsonpatch" />
       <module name="FastjsonVulns" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -89,6 +109,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.geojson" />
+        <item itemvalue="Application.fd" />
+        <item itemvalue="Application.jsonpatch" />
         <item itemvalue="Application.groovy" />
         <item itemvalue="Application.source1280" />
       </list>
@@ -117,7 +139,7 @@
       <workItem from="1662015897481" duration="21000" />
       <workItem from="1662115689045" duration="377000" />
       <workItem from="1662116109920" duration="229000" />
-      <workItem from="1784570267295" duration="341000" />
+      <workItem from="1784570267295" duration="13743000" />
     </task>
     <servers />
   </component>
