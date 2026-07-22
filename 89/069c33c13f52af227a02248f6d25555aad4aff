@@ -1,0 +1,14 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "89069c33c13f52af227a02248f6d25555aad4aff",
+  "prompts": {},
+  "humans": {
+    "h_1900cf179c28af": {
+      "author": "hosch3n <29953808+hosch3n@users.noreply.github.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
